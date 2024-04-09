@@ -9,3 +9,5 @@ app.use("/files", filesRouter);
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+export const server = app;
