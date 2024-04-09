@@ -1,8 +1,8 @@
-import express from "express";
-import { fetchData } from "../controllers/filesController.js";
+import express from 'express'
+import { fetchData } from '../controllers/filesController.js'
 
-const router = express.Router();
+const router = express.Router()
 
-router.get("/data", fetchData);
+router.get('/data', fetchData)
 
-export default router;
+export default router

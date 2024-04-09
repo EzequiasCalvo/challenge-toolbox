@@ -4,7 +4,13 @@
   "description": "Challenge toolbox backend",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "lint": "standard --fix"
+  },
+  "standard": {
+    "ignore": [
+      "test.js"
+    ]
   },
   "keywords": [],
   "author": "",
