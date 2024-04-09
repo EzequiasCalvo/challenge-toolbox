@@ -14,8 +14,18 @@ const removeFileProperty = (line) => {
 
 export const fetchData = async (req, res) => {
   try {
+    const { fileName } = req.query
     const files = await fetchFileList()
-    const dataPromises = files.map(async (fileName) => {
+
+    let filteredFiles = files
+
+    if (fileName) {
+      filteredFiles = files.filter((file) => {
+        return file === fileName
+      })
+    }
+
+    const dataPromises = filteredFiles.map(async (fileName) => {
       try {
         const fileContent = await fetchFileContent(fileName)
         let parsedData = parseCSV(fileContent)
