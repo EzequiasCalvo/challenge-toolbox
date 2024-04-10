@@ -8,6 +8,9 @@
     "build": "webpack --mode production",
     "test": "jest"
   },
+  "engines": {
+    "node": "16.x"
+  },
   "jest": {
     "testEnvironment": "jsdom",
     "setupFilesAfterEnv": [
