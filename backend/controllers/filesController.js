@@ -4,8 +4,10 @@ import { parseCSV } from "../utils/csvParser.js";
 const isValueValid = (value) =>
   value !== undefined && value !== null && value !== "";
 
+const isHexValid = (hex) => typeof hex === "string" && hex.length === 32;
+
 const isLineValid = ({ text, number, hex }) =>
-  isValueValid(text) && isValueValid(number) && isValueValid(hex);
+  isValueValid(text) && isValueValid(number) && isHexValid(hex);
 
 const removeFileProperty = (line) => {
   const { file, ...rest } = line;
