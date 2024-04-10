@@ -31,7 +31,7 @@ const FilesList = () => {
               />
             </Col>
             <Col>
-              <Button variant="primary" type="submit" onClick={handleSearch}>
+              <Button className="btn-dark" type="submit" onClick={handleSearch}>
                 Buscar
               </Button>
             </Col>
