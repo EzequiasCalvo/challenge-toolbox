@@ -32,7 +32,7 @@ const FilesList = () => {
             </Col>
             <Col>
               <Button className="btn-dark" type="submit" onClick={handleSearch}>
-                Buscar
+                Search
               </Button>
             </Col>
           </Row>
